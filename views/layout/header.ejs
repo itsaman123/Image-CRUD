@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+     title
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://img.icons8.com/?size=160&id=pEAInx3HGXxB&format=png" type="image/x-icon">
+
+
+        <link href="https://cdn.datatables.net/v/bs5/dt-1.13.8/datatables.min.css" rel="stylesheet">
+ 
+
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    /* nav styles */
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+
+    .logo {
+        font-size: 1.8rem;
+        color: rgb(5, 5, 116);
+        padding-left: 20px;
+    }
+
+    .hamburger {
+        padding-right: 20px;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        display: block;
+        width: 40px;
+        height: 5px;
+        margin-bottom: 10px;
+        background-color: black;
+    }
+
+    .nav__link {
+        position: fixed;
+        width: 94%;
+        top: 5rem;
+        left: 18px;
+        background-color: lightblue;
+    }
+
+    .nav__link a {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav__link a:hover {
+        background-color: lightcoral;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    @media screen and (min-width: 600px) {
+        .nav__link {
+            display: block;
+            position: static;
+            width: auto;
+            margin-right: 20px;
+            background: none;
+        }
+
+        .nav__link a {
+            display: inline-block;
+            padding: 15px 20px;
+        }
+
+        .hamburger {
+            display: none;
+        }
+    }
+
+    .header {
+        background-color: rgb(220, 231, 235);
+        /* border-bottom: 1px solid rgb(226, 232, 232); */
+        box-shadow: 5px rgb(80, 140, 80);
+    }
+</style>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo fw-bold">CRUD</a>
+
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+            <div class="nav__link hide">
+                <a href="/"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="add"><i class="fa-solid fa-user-plus"></i> Add User</a>
+                <a href="#"><i class="fa-solid fa-address-card"></i> About</a>
+                <a href="#"><i class="fa-solid fa-envelope"></i> Contact</a>
+            </div>
+        </nav>
+    </header>
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLink = document.querySelector('.nav__link');
+
+    hamburger.addEventListener('click', () => {
+        navLink.classList.toggle('hide');
+    });
+
+</script>
+
+</html>
